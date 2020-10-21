@@ -4,10 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="java" class="com.Java">
-        <property name="extraSessions" ref="officeHours"/>
+    <bean id="java" class="com.cy.services.Java" init-method="myInitMethod" destroy-method="myDestroyMethod">
     </bean>
-    <bean id="selenium" class="com.Selenium"></bean>
-    <bean id="officeHours" class="com.cy.services.OfficeHours"></bean>
 
 </beans>
