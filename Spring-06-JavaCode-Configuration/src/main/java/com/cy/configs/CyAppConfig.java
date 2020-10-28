@@ -14,7 +14,7 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:application.properties")
 public class CyAppConfig {
 
-    // @Bean is a method level annotation that creates bean from a class. We can use it instead of @Component annotation on class level
+    // @Bean is a method level annotation that creates bean from a class. We can use it instead of @Component annotation on class level. For ex. if we are using 3rd party classes(if we cannot reach them) @Bean is the best way to create bean
     @Bean
     public Java java(){
         return new Java(officeHours());
