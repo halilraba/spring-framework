@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HomeController {
 
+    @RequestMapping()
+    public String getRequestMapping11(){
+        return "home";
+    }
+
     @RequestMapping("/")
     public String getRequestMapping(){
         return "home";
@@ -13,7 +18,7 @@ public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/ozzy")
     public String getRequestMapping2(){
-        return "home";
+        return "ozzy";
     }
 
     @RequestMapping("/cy")
@@ -21,9 +26,9 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/spring")
-    public String getMappingEx(){
-        return "home";
+    @GetMapping("/sp")
+    public String getMappingEx1(){
+        return "ozzy";
     }
 
     @PostMapping("/spring")
@@ -43,7 +48,7 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping(value = "/course")
+    @GetMapping(value = "home/course")
     public String requestParamEx2(@RequestParam(value = "course", required = false, defaultValue = "cyb") String course){
         System.out.println("course is: " + course);
         return "home";

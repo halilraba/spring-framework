@@ -10,7 +10,8 @@ public class MentorController {
 
     @GetMapping("/show")
     public String showForm(){
-        return "home";
+
+       return "home";
     }
 
 
