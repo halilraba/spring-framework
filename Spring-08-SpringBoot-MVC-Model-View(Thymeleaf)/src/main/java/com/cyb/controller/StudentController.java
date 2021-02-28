@@ -1,6 +1,6 @@
-package com.cy.controller;
+package com.cyb.controller;
 
-import com.cy.model.Student;
+import com.cyb.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,10 +16,10 @@ import java.util.Random;
 public class StudentController {
 
     @GetMapping("/welcome")
-    public String HomePage(Model model){
+    public String homePage(Model model){
 
         model.addAttribute("name", "Ozzy");
-        model.addAttribute("course", "SprinBoot");
+        model.addAttribute("hi", "Hello");
 
         String subject = "Collections";
         model.addAttribute("subject", subject);
@@ -30,25 +30,26 @@ public class StudentController {
         List<Integer> numbers = new ArrayList<>();
         numbers.add(4);
         numbers.add(5);
-        numbers.add(6);
         numbers.add(7);
-        numbers.add(8);
         model.addAttribute("numbers", numbers);
 
-
-        LocalDate birthday = LocalDate.now().minusYears(30);
+        LocalDate birthday = LocalDate.now().minusYears(31);
         model.addAttribute("birthday", birthday);
 
 
         Student student = new Student(1, "Mike", "Smith");
         model.addAttribute("student", student);
 
+
+
         return "student/welcome";
     }
-
 
     @GetMapping("/register")
     public String homePage2(){
         return "student/register";
     }
+
+
+
 }

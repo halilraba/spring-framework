@@ -1,5 +1,4 @@
-package com.cy.model;
-
+package com.cyb.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
